@@ -1,0 +1,6 @@
+git log --graph --color-words --color --source --decorate --all
+git commit --amend -m "dev one commit"
+git log --pretty=format:"%h %s" --graph
+git merge --no-ff dev
+
+https://smartiqa.ru/courses/git/lesson-5
