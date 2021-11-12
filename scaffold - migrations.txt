@@ -1,0 +1,12 @@
+dotnet ef dbcontext scaffold "Server=.;Database=Employees;Integrated Security=True;" Microsoft.EntityFrameworkCore.SqlServer -c EmployeesContext -o Data/Models
+
+dotnet ef migrations add init --context Betting.Data.BettingContext --output-dir Data/Migrations
+dotnet ef database update
+
+dotnet ef migrations add init --context MoviesApp.Data.MoviesContext --output-dir Data/Migrations
+
+
+Install-Package Microsoft.EntityFrameworkCore.Tools –v 3.1.9
+Install-Package Microsoft.EntityFrameworkCore –v 3.1.9
+Install-Package Microsoft.EntityFrameworkCore.SqlServer –v 3.1.9
+Install-Package Microsoft.EntityFrameworkCore.SqlServer.Design
